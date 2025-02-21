@@ -4,13 +4,16 @@ public class even {
         Scanner in  = new Scanner(System.in);
         int i = 9;
         
-        while(i<=100)
+        while(i<100)
         {
         if(i%2==0 )
         {
-            System.out.println(i);
+            System.out.print(i+" ");
         }
         i++;
     }
+   
+    
     }
 }
+
