@@ -15,7 +15,7 @@ public class input {
         String str = in.next();
         System.out.println("String value : "+str);
         //next.charAt(0) is Character Scanner class.
-        char c = in.next.charAt(0);
+        char c = in.next().charAt(0);
         System.out.println("Character value : "+c);
     }
 }
