@@ -32,7 +32,7 @@ public void addLast(String data)
         return;
     }
     Node currNode = head;
-    while(currNode != null)
+    while(currNode.next != null)
     {
         currNode = currNode.next;
     }
@@ -58,6 +58,8 @@ public static void main(String[] args)
     linkedlist list = new linkedlist();
     list.addFirst(" a");
     list.addFirst("is");
+    list.printlist();
+    list.addLast("list");
     list.printlist();
 }    
 }
