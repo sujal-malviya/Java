@@ -13,10 +13,8 @@ public class Bill {
         float total = pencil + pen + eraser;
         System.out.println("Total cost without Gst:"+total+"\n");
         System.out.println("---With GST(18%)---");
-        pencil = pencil+0.18f;
-        pen  = pen+0.18f;
-        eraser = eraser+0.18f;
-        total = pen+pencil+eraser;
-        System.out.println("Total cost With Gst:"+total);
+        float newtotal = total + (0.18f * total);
+        
+        System.out.println("Total cost With Gst:"+newtotal);
     }
 }
