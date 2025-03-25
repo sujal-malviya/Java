@@ -5,8 +5,8 @@ public class Average {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-    
-        double average = (a+b)/2;
+        int c = sc.nextInt();
+        double average = (a+b+c)/3;
         System.out.println("Average is: " + average);
         sc.close();
     }
