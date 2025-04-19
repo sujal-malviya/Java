@@ -11,7 +11,7 @@ public class Bill {
         System.out.println("Eraser cost :"+eraser);
 
         float total = pencil + pen + eraser;
-        System.out.println("Total cost without Gst:"+total+"\n");
+        System.out.println("Total cost without Gst:"+totawwl+"\n");
         System.out.println("---With GST(18%)---");
         float newtotal = total + (0.18f * total);
         
