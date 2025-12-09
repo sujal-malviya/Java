@@ -1,0 +1,36 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+jira.base-url=https://samcode2212.atlassian.net
+jira.email=samcode2212@gmail.com
+jira.api-token=ATATT3xFfGF0vmGDEAuy7WwDXQwH5OoLriVOQQOZOpuRhySY1g2IxFKa7vAlwrx8PyE7kwsk05uYSM3E9haTtV8nZu2pEkxGt31nSjQblepBeUupcmX8VQUY1DGyd9L_XkYXgJY0FF8gjA2CArihEAlvsEa0AHiblnVty0io-tm3kxuP-uRZIFA=1BA52281

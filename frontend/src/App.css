@@ -1,0 +1,190 @@
+/* App.css - Styles for GitHub Analytics Dashboard */
+
+/* ---- Reset / base ---- */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* ---- Layout ---- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 22px;
+}
+
+/* Top nav */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.35);
+}
+.flex { display:flex; align-items:center; }
+.flex-between { display:flex; align-items:center; justify-content:space-between; }
+
+/* Buttons */
+button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  color: inherit;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+button:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.35); }
+button:active { transform: translateY(0); }
+
+/* Primary action style */
+button.primary {
+  background: linear-gradient(180deg,#16a34a,#059669);
+  color: white;
+}
+
+/* Form area */
+.form-area {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+}
+
+/* Inputs / selects */
+select, input[type="text"], input[type="file"] {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: transparent;
+  color: inherit;
+  outline: none;
+  min-height: 38px;
+}
+input[type="text"] { min-width: 220px; }
+
+/* Cards */
+.card {
+  border-radius: 12px;
+  padding: 18px;
+  margin: 18px auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));
+  box-shadow: 0 10px 30px rgba(2,6,23,0.45);
+}
+
+/* Heatmap container */
+.heatmap-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Heatmap grid */
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(53, 12px);
+  gap: 6px;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 6px 0 14px 0;
+}
+.heat-box {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  position: relative;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  cursor: pointer;
+}
+
+/* hover tooltip container */
+.heat-box .tooltip {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(2,6,23,0.98);
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease, transform 120ms ease;
+  z-index: 60;
+}
+.heat-box:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-6px);
+}
+
+/* intensity levels */
+.level-0 { background: #e5e7eb; }
+.level-1 { background: #bbf7d0; }
+.level-2 { background: #4ade80; }
+.level-3 { background: #16a34a; }
+.level-4 { background: #166534; }
+
+/* Legend */
+.heatmap-legend { display:flex; align-items:center; gap:8px; justify-content:center; margin-top:10px; color: inherit; }
+.heatmap-legend .heat-box { width: 16px; height: 16px; }
+
+/* Centered heading */
+.center { text-align:center; }
+
+/* Timeline */
+.timeline-form {
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-top: 18px;
+}
+.timeline-box { max-width: 1000px; margin: 20px auto; }
+.timeline-event {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Pipeline */
+.pipeline-box { max-width: 1000px; margin: 20px auto; padding: 12px; }
+.pipeline-stage {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: rgba(255,255,255,0.02);
+  border-left: 4px solid rgba(255,255,255,0.04);
+}
+
+/* Recent commits (small timeline) */
+.commit-item {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .heatmap-grid { grid-template-columns: repeat(26, 12px); gap:5px; }
+  .form-area { padding: 10px; }
+  .container { padding: 14px; }
+}
+
+/* LIGHT MODE overrides (applied by body color swap in JS) */
+/* We keep colors neutral and rely on body background to change. */
