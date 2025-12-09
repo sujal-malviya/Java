@@ -1,0 +1,76 @@
+/* Timeline CSS */
+
+.timeline-container {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-event {
+  position: relative;
+  padding: 16px;
+  margin: 16px 0;
+  margin-left: 32px;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 4px solid #3b82f6;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  left: -14px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: 3px solid rgba(15, 23, 42, 1);
+}
+
+.timeline-event.commit {
+  border-left-color: #16a34a;
+}
+
+.timeline-event.commit::before {
+  background: #16a34a;
+}
+
+.timeline-event.review {
+  border-left-color: #f59e0b;
+}
+
+.timeline-event.review::before {
+  background: #f59e0b;
+}
+
+.timeline-event.merge {
+  border-left-color: #0ea5e9;
+}
+
+.timeline-event.merge::before {
+  background: #0ea5e9;
+}
+
+.timeline-event h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.timeline-event p {
+  margin: 6px 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.timeline-event small {
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.timeline-duration {
+  color: #f59e0b;
+  font-weight: 500;
+}

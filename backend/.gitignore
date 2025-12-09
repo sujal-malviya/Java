@@ -1,0 +1,60 @@
+# IDE
+.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+*.code-workspace
+
+# Build
+target/
+build/
+*.class
+*.jar
+*.war
+*.nar
+*.zip
+*.tar.gz
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# Gradle
+.gradle/
+gradle/
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+application-local.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Testing
+.coverage/
+htmlcov/
+
+# IDE specific
+.project
+.classpath
+.settings/
+.apt_generated/
+.apt_generated_tests/
+.factorypath

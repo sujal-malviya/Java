@@ -1,0 +1,70 @@
+/* Heatmap CSS */
+
+.heatmap-container {
+  width: 100%;
+  margin: 20px 0;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  gap: 4px;
+  margin: 12px 0;
+}
+
+.heat-box {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.heat-box:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+.heat-box.level-0 {
+  background: rgba(203, 213, 225, 0.1);
+}
+
+.heat-box.level-1 {
+  background: rgba(34, 197, 94, 0.3);
+}
+
+.heat-box.level-2 {
+  background: rgba(34, 197, 94, 0.5);
+}
+
+.heat-box.level-3 {
+  background: rgba(34, 197, 94, 0.7);
+}
+
+.heat-box.level-4 {
+  background: rgba(34, 197, 94, 1);
+}
+
+.heat-box .tooltip {
+  visibility: hidden;
+  position: absolute;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 6px 8px;
+  border-radius: 4px;
+  bottom: 125%;
+  left: 50%;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  font-size: 12px;
+}
+
+.heat-box:hover .tooltip {
+  visibility: visible;
+}
